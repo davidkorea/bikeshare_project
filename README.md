@@ -1,3 +1,5 @@
+> repo정리하기 때문에 어제한 컨트리뷰션스 다 없어졌네ㅠㅠ
+
 # bikeshare
 Everage riding time for each quarter in 2017
  
@@ -16,6 +18,8 @@ $ data -> 'ESC'
 $ :wq
 ```
 # Project Summary
+
+### 01 mean duration
 
   * file path
   ```php 
