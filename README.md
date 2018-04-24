@@ -17,6 +17,14 @@ $ vim .gitignore
 $ data -> 'ESC'
 $ :wq
 ```
+
+# Issue 2 - git init Desktop
+ 
+```
+$ cd desktop
+$ rm -rf .git
+```
+
 # Project Summary
 
 ### 01 mean duration
