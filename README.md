@@ -61,6 +61,9 @@ $ rm -rf .git
 * Subject
 
   - filter data by boolean array
+  
+    ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/datafliter.jpg?raw=true)
+    
   - create a n-demention array ndarray
   - matplotlib
   
