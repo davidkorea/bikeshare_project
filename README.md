@@ -19,7 +19,9 @@ $ :wq
 ```
 
 # Issue 2 - git init Desktop
- 
+
+잘못으로 바탕화면을 git repo로 추가했음..ㅠ 아래 코드에 따라 해결할수있음.
+
 ```
 $ cd desktop
 $ rm -rf .git
