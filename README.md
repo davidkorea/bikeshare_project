@@ -68,7 +68,7 @@ $ rm -rf .git
   - create a n-demention array ndarray
     
     Using list's list to create a n demention array.
-    ```python
+    ```php
     create_ndarray = np.array( [list1, list2, ... ] )
     ```
   
