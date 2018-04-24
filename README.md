@@ -37,7 +37,7 @@ $ rm -rf .git
   ```
   * read file 
   ```php
-  read_file = np.loadtxt(data_file, delimiter=',', dtype='str', skiprows=1)
+  read_file = np.loadtxt(data_file, delimiter=',', dtype='str', skiprows=1)  //n demention array N维数组
   ```
   * read columns 
   ```php
@@ -55,3 +55,12 @@ $ rm -rf .git
   ```php
   calculate = change_data_type * 100
   ```
+
+### 02 mean duration by user tupe
+ 
+* Subject
+
+  - filter data by boolean array
+  - create a n-demention array ndarray
+  - matplotlib
+  
