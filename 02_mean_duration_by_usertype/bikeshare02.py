@@ -39,8 +39,15 @@ def save_and_show_results(member_mean_duration_list,casual_mean_duration_list):
     mean_duration_arr = np.array([member_mean_duration_list, casual_mean_duration_list])
     np.savetxt('./mean_duration.csv', mean_duration_arr, delimiter=',')
 
-
-    # plt.figure()
+    plt.figure()
+    plt.plot(member_mean_duration_list, color='g', linestyle='-', marker='o', label='Member')
+    plt.plot(casual_mean_duration_list,color='r', linestyle='--', marker='*', label='Casual')
+    plt.title('Member vs Casual')
+    plt.xlabel('Quarter')
+    plt.ylabel('Mean duration(min)')
+    plt.legend(loc='best')
+    plt.savefig('./plot.png')
+    plt.show()
 
 cln_data_arr_list = collect_and_process_data()
 member_mean_duration_list = get_mean_duration_by_type(cln_data_arr_list,'Member')
