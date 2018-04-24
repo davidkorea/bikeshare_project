@@ -66,6 +66,12 @@ $ rm -rf .git
 
     
   - create a n-demention array ndarray
+    
+    Using list's list to create a n demention array.
+    ```python
+    create_ndarray = np.array( [list1, list2, ... ] )
+    ```
+  
   - matplotlib
   
 ### 1. filter data by boolean array
