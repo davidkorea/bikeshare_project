@@ -70,3 +70,58 @@ $ rm -rf .git
   - create a n-demention array ndarray
   - matplotlib
   
+1. boolean array (mask)
+
+Debug logs 
+
+```python
+>>>data_arr
+Out[1]: 
+array([['221834', '2017-01-01 00:00:41', '2017-01-01 00:04:23', ...,
+        'M St & New Jersey Ave SE', 'W00869', 'Member'],
+       ['1676854', '2017-01-01 00:06:53', '2017-01-01 00:34:49', ...,
+        '8th & D St NW', 'W00894', 'Casual'],
+       ['1356956', '2017-01-01 00:07:10', '2017-01-01 00:29:47', ...,
+        'New York Ave & 15th St NW', 'W21945', 'Casual'],
+       ...,
+       ['423494', '2017-03-31 23:58:34', '2017-04-01 00:05:38', ...,
+        '11th & H St NE', 'W20773', 'Member'],
+       ['1048876', '2017-03-31 23:59:33', '2017-04-01 00:17:02', ...,
+        'Potomac & Pennsylvania Ave SE', 'W20784', 'Member'],
+       ['223449', '2017-03-31 23:59:43', '2017-04-01 00:03:26', ...,
+        '16th & Harvard St NW', 'W20825', 'Member']], dtype='<U64')
+        
+>>>data_arr.shape
+Out[2]: (646586, 9)
+
+>>>bool_arr
+Out[3]: array([ True, False, False, ...,  True,  True,  True])
+
+>>>bool_arr.shape
+Out[4]: (646586,)
+
+>>>filtered_arr.shape
+Out[5]: (528509, 9)
+
+>>>filtered_arr
+Out[6]: 
+array([['221834', '2017-01-01 00:00:41', '2017-01-01 00:04:23', ...,
+        'M St & New Jersey Ave SE', 'W00869', 'Member'],
+       ['473337', '2017-01-01 00:08:36', '2017-01-01 00:16:29', ...,
+        '3rd & H St NE', 'W20340', 'Member'],
+       ['200077', '2017-01-01 00:11:07', '2017-01-01 00:14:27', ...,
+        'Calvert St & Woodley Pl NW', 'W20398', 'Member'],
+       ...,
+       ['423494', '2017-03-31 23:58:34', '2017-04-01 00:05:38', ...,
+        '11th & H St NE', 'W20773', 'Member'],
+       ['1048876', '2017-03-31 23:59:33', '2017-04-01 00:17:02', ...,
+        'Potomac & Pennsylvania Ave SE', 'W20784', 'Member'],
+       ['223449', '2017-03-31 23:59:43', '2017-04-01 00:03:26', ...,
+        '16th & Harvard St NW', 'W20825', 'Member']], dtype='<U64')
+
+```
+
+* ```data_arr```: cleaned data with no "".
+* ```data_arr.shape = (646586, 9)```: same demention as raw data.
+* ```bool_arr```: through ```data_arr[;, -1] == type```, select only the last one column and return/change it to the boolean array. Also it it a one demention array,because we select only one(last) column.that why ```bool_arr.shape = (646586,)```
+* when we process x[y], the mask array (bool_arr) will be expanded automatically as the same demention as the raw data(arrar x). another words, (646586, 9) + (646586, ) = (528509, 9)/filtered_arr 
