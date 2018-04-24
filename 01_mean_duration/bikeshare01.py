@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-data_path = '/Users/osx/Desktop/bikeshare/data'
+data_path = '/Users/osx/Desktop/bikeshare_project/data'
 data_filenames = ['2017-q1_trip_history_data.csv', '2017-q2_trip_history_data.csv',
               '2017-q3_trip_history_data.csv', '2017-q4_trip_history_data.csv']
 
