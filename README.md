@@ -27,9 +27,7 @@ $ cd desktop
 $ rm -rf .git
 ```
 
-# Project Summary
-
-### 01 mean duration
+# 01 mean duration
 
   * file path
   ```php 
@@ -56,9 +54,9 @@ $ rm -rf .git
   calculate = change_data_type * 100
   ```
 
-### 02 mean duration by user tupe
+# 02 mean duration by user tupe
  
-* Subject
+## Subject
 
   - filter data by boolean array
   
@@ -70,7 +68,7 @@ $ rm -rf .git
   - create a n-demention array ndarray
   - matplotlib
   
-1. boolean array (mask)
+### 1. filter data by boolean array
 
 Debug logs 
 
