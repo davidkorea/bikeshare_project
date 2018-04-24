@@ -64,6 +64,9 @@ $ rm -rf .git
   
     ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/datafliter.jpg?raw=true)
     
+    ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/guangbo.jpg?raw=true)
+
+    
   - create a n-demention array ndarray
   - matplotlib
   
