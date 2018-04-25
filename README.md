@@ -129,3 +129,49 @@ array([['221834', '2017-01-01 00:00:41', '2017-01-01 00:04:23', ...,
 * ```data_arr.shape = (646586, 9)```: same demention as raw data.
 * ```bool_arr```: through ```data_arr[;, -1] == type```, select only the last one column and return/change it to the boolean array. Also it it a one demention array,because we select only one(last) column.that why ```bool_arr.shape = (646586,)```
 * when we process x[y], the mask array (bool_arr) will be expanded automatically as the same demention as the raw data(arrar x). another words, (646586, 9) + (646586, ) = (528509, 9)/filtered_arr 
+
+### 2. save & show results
+
+* create ndarray and save as csv
+
+```php
+mean_duraion_arr = np.array([member_mean_duration_list, casual_mean_duration_list])
+np.savetxt('./mean_duration.csv', mean_duraion_arr, delimiter=',')
+```
+![](https://github.com/davidkorea/bikeshare_project/blob/master/images/csv.png)
+
+* matplotlab 
+
+```php
+ plt.figure()
+ plt.plot(member_mean_duration_list, color='g', linestyle='-', marker='o', label='Member')
+ plt.plot(casual_mean_duration_list, color='r', linestyle='--', marker='*', label='Casual')
+ plt.title('Member vs Casual')
+ plt.xlabel('Quarter')
+ plt.ylabel('Mean duration (min)')
+ plt.legend(loc='best')
+ plt.savefig('./duration_trend.png')
+ plt.show()
+```
+![](https://github.com/davidkorea/bikeshare_project/blob/master/images/plot1.png)
+
+**>>> optimize code**
+
+* transfer csv to 4rows,2colums format
+
+```php
+mean_duraion_arr = np.array([member_mean_duration_list, casual_mean_duration_list]).transpose()
+```
+* add header for csv
+
+```php
+np.savetxt('./mean_duration.csv', mean_duraion_arr, delimiter=',',
+           header='Member Mean Duraion, Casual Mean Duraion', fmt='%.4f',
+           comments='')
+```
+* plot xticks
+
+```php
+plt.xticks(range(0, 4), ['1st', '2nd', '3rd', '4th'], rotation=45)
+
+```
