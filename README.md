@@ -208,7 +208,15 @@ otherwise, the layout couldn't show a full page, x-label has been cut.
 
 * Reshape - array's demention could be changed by the condtion which is keeping the ammount of data. 
 
-  > A[i,j] = B[m,n], i*j = m*n.
+  > A[ i , j ] = B[ m , n ], i x j = m x n.
+  
+  ```php
+  arr_a.shape() = (3,4)
+  arr_a = arr_a.reshape(1,12) or arr_a.reshape(6,2)
+  arr_a = arr_a.reshape(-1,1) //'-1'could be calcuated by python and equals 12
+  ```
+  
+  if you just know one demention of the new array, you can use '-1' to represent it as the other demention.
   
   ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/reshape.png)
 
