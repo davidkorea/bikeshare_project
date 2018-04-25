@@ -59,7 +59,26 @@ $ rm -rf .git
 ## Subject
 
   - filter data by boolean array
-  
+    
+    * get ndarray
+      ```php
+      data_arr = np.loadtxt('./path', delimiter=',', dtype='str', skiprows=1)
+      ```
+    * clean data
+      ```php
+      cln_data_arr = np.core.defchararray.replace(data_arr, ' C', '')
+      ```
+    * boolean/mask array
+      ```php
+      bool_arr = cln_data_arr[:, 0] == 'Jan' // 1-demention, only 1 column
+      ```
+    * filtered_arr
+      ```php
+      filtered_arr = cln_data_arr[bool_arr] // 2-demention, same demention as origin data
+      ```
+      
+    > How to use different demention mask to sort data? how to know which column should apply a mask??
+      
     ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/datafliter.jpg?raw=true)
     
     ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/guangbo.jpg?raw=true)
