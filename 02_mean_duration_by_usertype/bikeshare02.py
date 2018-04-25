@@ -38,7 +38,7 @@ def save_and_show_results(member_mean_duration_list,casual_mean_duration_list):
 
     mean_duration_arr = np.array([member_mean_duration_list, casual_mean_duration_list]).transpose()
     np.savetxt('./mean_duration.csv', mean_duration_arr, delimiter=',',
-               header='Member mean duration, Casual mean duration', fmt='%.4f')
+               header='Member mean duration, Casual mean duration', fmt='%.4f', comments='')
 
     plt.figure()
     plt.plot(member_mean_duration_list, color='g', linestyle='-', marker='o', label='Member')
@@ -48,6 +48,7 @@ def save_and_show_results(member_mean_duration_list,casual_mean_duration_list):
     plt.ylabel('Mean duration(min)')
     plt.xticks(range(0,4),['1st','2nd','3rd','4th'],rotation=45)
     plt.legend(loc='best')
+    plt.tight_layout()
     plt.savefig('./plot.png')
     plt.show()
 
