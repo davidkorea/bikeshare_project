@@ -158,20 +158,26 @@ np.savetxt('./mean_duration.csv', mean_duraion_arr, delimiter=',')
 **>>> optimize code**
 
 * transfer csv to 4rows,2colums format
-
 ```php
 mean_duraion_arr = np.array([member_mean_duration_list, casual_mean_duration_list]).transpose()
 ```
 * add header for csv
-
 ```php
 np.savetxt('./mean_duration.csv', mean_duraion_arr, delimiter=',',
            header='Member Mean Duraion, Casual Mean Duraion', fmt='%.4f',
            comments='')
 ```
-* plot xticks
+if no ```comments=''```, the header will show a "#" sign which means defaultly the first row is been commented.
+![](https://github.com/davidkorea/bikeshare_project/blob/master/images/csv2.png)
 
+* plot xticks
 ```php
 plt.xticks(range(0, 4), ['1st', '2nd', '3rd', '4th'], rotation=45)
 
 ```
+* tight layout
+```php
+plt.tight_layout()
+```
+otherwise, the layout couldn't show a full page, x-label has been cut.
+![](https://github.com/davidkorea/bikeshare_project/blob/master/images/plot2.png)
