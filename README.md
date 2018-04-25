@@ -201,3 +201,17 @@ plt.tight_layout()
 ```
 otherwise, the layout couldn't show a full page, x-label has been cut.
 ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/plot2.png)
+ 
+# 03 Pie chart by user type percentage
+
+### 1 n-array reshape / concatenate
+
+* Reshape - array's demention could be changed by the condtion which is keeping the ammount of data. 
+
+  > A[i,j] = B[m,n], i*j = m*n.
+  
+  ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/reshape.png)
+
+* Concatenate - if some arrays have same culumn-dementons, they could be binded as a new array.
+
+  ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/concatenate.png)
