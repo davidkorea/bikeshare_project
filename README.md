@@ -167,7 +167,7 @@ np.savetxt('./mean_duration.csv', mean_duraion_arr, delimiter=',',
            header='Member Mean Duraion, Casual Mean Duraion', fmt='%.4f',
            comments='')
 ```
-if no ```comments=''```, the header will show a "#" sign which means defaultly the first row is been commented.
+if no ```comments=''```, the header will start with a "#" sign which means the first row is being commented by default.
 ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/csv2.png)
 
 * plot xticks
