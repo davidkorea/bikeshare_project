@@ -204,7 +204,7 @@ otherwise, the layout couldn't show a full page, x-label has been cut.
  
 # 03 Pie chart by user type percentage
 
-### 1 n-array reshape / concatenate
+### 1. n-array reshape / concatenate
 
 * Reshape - array's demention could be changed by the condtion which is keeping the ammount of data. 
 
@@ -223,3 +223,17 @@ otherwise, the layout couldn't show a full page, x-label has been cut.
 * Concatenate - if some arrays have same culumn-dementons, they could be binded as a new array.
 
   ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/concatenate.png)
+  
+### 2. pie chart
+
+```php
+n_users = [n_member, n_casual]
+
+plt.figure()
+plt.pie(n_users, labels=['Member', 'Casual'], autopct='%.2f%%', shadow=True, explode=(0.05, 0))
+plt.axis('equal') // let x = y to make a round circle pie chart.
+plt.tight_layout() //make all the things into this figure.
+plt.savefig('./xxx.png')
+plt.show()
+
+```
