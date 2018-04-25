@@ -147,8 +147,8 @@ array([['221834', '2017-01-01 00:00:41', '2017-01-01 00:04:23', ...,
 
 * ```data_arr```: cleaned data with no "".
 * ```data_arr.shape = (646586, 9)```: same demention as raw data.
-* ```bool_arr```: through ```data_arr[;, -1] == type```, select only the last one column and return/change it to the boolean array. Also it it a one demention array,because we select only one(last) column.that why ```bool_arr.shape = (646586,)```
-* when we process x[y], the mask array (bool_arr) will be expanded automatically as the same demention as the raw data(arrar x). another words, (646586, 9) + (646586, ) = (528509, 9)/filtered_arr 
+* ```bool_arr```: through ```data_arr[:, -1] == type```, select only the last one column and return/change it to the boolean array. Also it it a one demention array,because we select only one(last) column.that why ```bool_arr.shape = (646586,)```
+* when we process x[y], the mask array (bool_arr) will be expanded automatically as the same demention as the raw data(array x). another words, (646586, 9) + (646586, ) = (528509, 9)/filtered_arr 
 
 ### 2. save & show results
 
