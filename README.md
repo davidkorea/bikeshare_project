@@ -60,6 +60,26 @@ $ rm -rf .git
 
   - filter data by boolean array
   
+    - get ndarray
+      ```php
+      data_arr = np.loadtxt('./path', delimiter=',', dtype='str', skiprows=1)
+      ```
+    - clean data
+      ```php
+      cln_data_arr = np.core.defchararray.replace(data_arr, ' C', '')
+      ```
+    - boolean/mask array
+      ```php
+      bool_arr = cln_data_arr[:, 0] == 'Jan' // 1-demention, only 1 column
+      ```
+    - filtered_arr
+      ```php
+      filtered_arr = cln_data_arr[bool_arr] // 2-demention, same demention as origin data
+      ```
+      
+    > How to use different demention mask to sort data? how to know which column should apply a mask??
+      
+      
     ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/datafliter.jpg?raw=true)
     
     ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/guangbo.jpg?raw=true)
@@ -127,8 +147,8 @@ array([['221834', '2017-01-01 00:00:41', '2017-01-01 00:04:23', ...,
 
 * ```data_arr```: cleaned data with no "".
 * ```data_arr.shape = (646586, 9)```: same demention as raw data.
-* ```bool_arr```: through ```data_arr[;, -1] == type```, select only the last one column and return/change it to the boolean array. Also it it a one demention array,because we select only one(last) column.that why ```bool_arr.shape = (646586,)```
-* when we process x[y], the mask array (bool_arr) will be expanded automatically as the same demention as the raw data(arrar x). another words, (646586, 9) + (646586, ) = (528509, 9)/filtered_arr 
+* ```bool_arr```: through ```data_arr[:, -1] == type```, select only the last one column and return/change it to the boolean array. Also it it a one demention array,because we select only one(last) column.that why ```bool_arr.shape = (646586,)```
+* when we process x[y], the mask array (bool_arr) will be expanded automatically as the same demention as the raw data(array x). another words, (646586, 9) + (646586, ) = (528509, 9)/filtered_arr 
 
 ### 2. save & show results
 
