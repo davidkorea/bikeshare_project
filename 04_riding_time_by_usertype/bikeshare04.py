@@ -18,7 +18,7 @@ def collect_data():
         cln_duration_col = np.core.defchararray.replace(data_arr[:, 0],'"','').reshape(-1,1)
         cln_type_col = np.core.defchararray.replace(data_arr[:, -1],'"','').reshape(-1,1)
         #(815370, 1) | (815370, ).reshape(-1,1)=(815370, 1)
-        # with no reshape, counld not concatenate(axis=1) as 'new_dur_type_arr'
+        # with no reshape, could not concatenate(axis=1) as 'new_dur_type_arr'
 
         cln_dur_type_arr_list = [cln_duration_col,cln_type_col]
 
