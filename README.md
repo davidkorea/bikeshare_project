@@ -222,7 +222,7 @@ otherwise, the layout couldn't show a full page, x-label has been cut.
 
 * Concatenate - if some arrays have same culumn-dementons, they could be binded as a new array.
 
-  ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/concatenate.png)
+  ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/concatenate1.png)
   
 ### 2. pie chart
 
@@ -237,3 +237,10 @@ plt.savefig('./xxx.png')
 plt.show()
 
 ```
+
+# 03 Histogram chart of riding time by user type
+
+## Subject
+* reshape / concatenate
+* np.histogram
+* plt.add_subplot
