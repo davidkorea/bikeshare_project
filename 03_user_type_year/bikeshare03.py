@@ -15,6 +15,7 @@ def collect_and_process_data():
         cln_data_col = np.core.defchararray.replace(data_arr[:,-1],'"','')
                        # 默认为行向量
         cln_data_col = cln_data_col.reshape(-1,1)
+        # 由于上面选择了一列，所以这里不reshape也可以
         cln_data_col_list.append(cln_data_col)
     year_member_type = np.concatenate(cln_data_col_list)
     return year_member_type
