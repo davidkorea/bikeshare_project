@@ -12,14 +12,14 @@ def collect_data():
     temp_col_list = []
     for file in file_names:
         data_file = os.path.join(data_path,file)
-        temp_col = np.loadtxt(data_file, delimiter=',', dtype='str',skiprows=1)
+        temp_col = np.loadtxt(data_file, delimiter=',',skiprows=1)
         temp_col_list.append(temp_col)
     all_list = np.concatenate(temp_col_list)
     return all_list
 
 def analyse_data(all_list):
-    upper = all_list[all_list < '0'].shape[0]
-    lower = all_list[all_list >= '0'].shape[0]
+    upper = all_list[all_list < 0].shape[0]
+    lower = all_list[all_list >= 0].shape[0]
     temp_n = [upper, lower]
     return temp_n
 
