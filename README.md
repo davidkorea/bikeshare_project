@@ -271,7 +271,7 @@ n_bins = 12
 m_dur_hist,m_bins_edges = np.histogram(m_min_duration_arr,range=hist_range,bins=n_bins)
 # np.histogram() returns 2 vars...
 ```
-### 3. np.histm / add_subplot
+### 3. np.hist / add_subplot
 
 ```php
 fig = plt.figure(figsize=(10,5))
