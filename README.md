@@ -244,6 +244,7 @@ plt.show()
 * reshape / concatenate
 * np.histogram
 * plt.add_subplot
+
   !()[https://github.com/davidkorea/bikeshare_project/blob/master/images/histogram.png]
 
 ### 1. reshape / concatenate
