@@ -251,14 +251,13 @@ plt.show()
 cln_duration_col = np.core.defchararray.replace(data_arr[:, 0],'"','').reshape(-1,1)
 cln_type_col = np.core.defchararray.replace(data_arr[:, -1],'"','').reshape(-1,1)
 #(815370, 1) | (815370, ).reshape(-1,1)=(815370, 1)
-# with no reshape, could not concatenate(axis=1) as 'new_dur_type_arr'
+# with no reshape, could not concatenate(axis=1) as 'new_dur_type_arr' -> below **Error**
 cln_dur_type_arr_list = [cln_duration_col,cln_type_col]
 new_dur_type_arr = np.concatenate(cln_dur_type_arr_list,axis=1)
 ```
-
-> ull_data_arr = np.concatenate(data_arr_list,axis=1)
-  numpy.core._internal.AxisError: axis 1 is out of bounds for array of dimension 1
-
+> **Error**
+> all_data_arr = np.concatenate(data_arr_list,axis=1)
+> numpy.core._internal.AxisError: axis 1 is out of bounds for array of dimension 1
 
 * get one column data as a column vector
   
