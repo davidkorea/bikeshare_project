@@ -244,3 +244,42 @@ plt.show()
 * reshape / concatenate
 * np.histogram
 * plt.add_subplot
+
+### 1. reshape / concatenate
+
+```php
+cln_duration_col = np.core.defchararray.replace(data_arr[:, 0],'"','').reshape(-1,1)
+cln_type_col = np.core.defchararray.replace(data_arr[:, -1],'"','').reshape(-1,1)
+#(815370, 1) | (815370, ).reshape(-1,1)=(815370, 1)
+# with no reshape, could not concatenate(axis=1) as 'new_dur_type_arr'
+cln_dur_type_arr_list = [cln_duration_col,cln_type_col]
+new_dur_type_arr = np.concatenate(cln_dur_type_arr_list,axis=1)
+```
+* get one column data as a column vector
+  
+  cln_dur_col -> cln_dur_col.reshape(-1,1), (815370, 1) | (815370, ).reshape(-1,1)=(815370, 1)
+  
+* make a new array by needed column data
+
+  np.concatenate(cln_dur_col, cln_type_col, axis=1), (815370, 2) 
+  
+### 2. no.histogram
+
+```php
+hist_range = (0, 180)
+n_bins = 12
+m_dur_hist,m_bins_edges = np.histogram(m_min_duration_arr,range=hist_range,bins=n_bins)
+# np.histogram() returns 2 vars...
+```
+### 3. np.histm / add_subplot
+
+```php
+fig = plt.figure(figsize=(10,5))
+ax1 = fig.add_subplot(1,2,1) #(row,culumn,position)
+ax2 = fig.add_subplot(1,2,2,sharey=ax1)
+
+ax1.hist(m_min_duration_arr,range=hist_range,bins=n_bins)
+ax1.set_xticks(range(0,181,15)) # from 0 to 180,step=15
+ax1.set_title('Member')
+ax1.set_ylabel('Count')
+```
