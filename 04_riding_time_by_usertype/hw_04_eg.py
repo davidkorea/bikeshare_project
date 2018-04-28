@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 读取csv数据文件
-data_arr = np.loadtxt('./temp.csv', delimiter=',', skiprows=1)
+data_arr = np.loadtxt('./hw_data_temp.csv', delimiter=',', skiprows=1)
 
 # 1. 统计直方图所需信息
 # 气温数据
