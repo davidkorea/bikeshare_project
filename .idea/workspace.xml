@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f0d9742-97c2-4249-a08a-f67dffdd5bef" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/04_riding_time_by_usertype/hw_04.py" afterPath="$PROJECT_DIR$/04_riding_time_by_usertype/hw_04.py" />
-      <change beforePath="$PROJECT_DIR$/04_riding_time_by_usertype/hw_04_eg.py" afterPath="$PROJECT_DIR$/04_riding_time_by_usertype/hw_04_eg.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw_04.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hw_04.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/04_riding_time_by_usertype/hw_04.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-64">
-              <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="273">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -38,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="temp_hist.png" pinned="false" current-in-tab="true">
+      <file leaf-file-name="temp_hist.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/04_riding_time_by_usertype/temp_hist.png">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -147,8 +146,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="23" />
-    <option name="y" value="49" />
+    <option name="x" value="53" />
+    <option name="y" value="69" />
     <option name="width" value="1138" />
     <option name="height" value="704" />
   </component>
@@ -347,13 +346,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="49" width="1138" height="704" extended-state="0" />
+    <frame x="53" y="69" width="1138" height="704" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15054744" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.334471" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.334471" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -649,19 +648,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/04_riding_time_by_usertype/temp_hist.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/04_riding_time_by_usertype/hw_04.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        <state relative-caret-position="273">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_riding_time_by_usertype/temp_hist.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
   </component>

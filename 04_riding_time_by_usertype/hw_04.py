@@ -10,7 +10,7 @@ def collect_data():
     data_arr_list = []
     for file_name in file_names:
         file_full_path = os.path.join(file_path,file_name)
-        data_arr = np.loadtxt(file_full_path,delimiter=',',skiprows=1).reshape(-1,1)
+        data_arr = np.loadtxt(file_full_path,delimiter=',',skiprows=1)
         data_arr_list.append(data_arr)
 
     return data_arr_list
