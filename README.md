@@ -5,7 +5,7 @@ Everage riding time for each quarter in 2017
  
 # Issue 1 - .gitignore
  
-If the size of a sigle file is bigger than 50M, could not be uoloaded to github.
+If the size of a sigle file is bigger than 50M, could not be uploaded to github.
 
 Before you add files to .git, make .gitignore first and then it could work and ignore the files you added to .gitignore
 
@@ -263,7 +263,7 @@ new_dur_type_arr = np.concatenate(cln_dur_type_arr_list,axis=1)
 
 * get one column data as a column vector
   
-  cln_dur_col -> cln_dur_col.reshape(-1,1), (815370, 1) | (815370, ).reshape(-1,1)=(815370, 1)
+  cln_dur_col -> cln_dur_col.reshape(-1,1)   |   (815370, ).reshape(-1,1)=(815370, 1)
   
 * make a new array by needed column data
 
