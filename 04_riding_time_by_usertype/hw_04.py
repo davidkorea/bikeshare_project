@@ -52,12 +52,6 @@ def plot(data_arr_list):
     plt.savefig('./temp_hist.png')
     plt.show()
 
-
-
-
-
-
-
 data_arr_list = collect_data()
 analyse_data(data_arr_list)
 plot(data_arr_list)
