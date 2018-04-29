@@ -238,7 +238,7 @@ plt.show()
 
 ```
 
-# 03 Histogram chart of riding time by user type
+# 04 Histogram chart of riding time by user type
 
 ## Subject
 * reshape / concatenate
@@ -289,3 +289,39 @@ ax1.set_xticks(range(0,181,15)) # from 0 to 180,step=15
 ax1.set_title('Member')
 ax1.set_ylabel('Count')
 ```
+# 05 Grouped bar chart & quarter riding time by type
+
+### Chinese font
+
+```php
+from matplotlib.font_manager import FontProperties
+def get_chinese_font():
+    return FontProperties(fname='/System/Library/Fonts/PingFang.ttc')
+```
+
+### Grouped bar chart
+
+```php
+bar_locs = np.arange(4)
+bar_width = 0.35
+xticks_labels = ['第{}季度'.format(i+1) for i in range(4)]
+
+plt.figure()
+plt.bar(bar_locs,mean_member_list, width=bar_width,color='b',alpha=0.7,label='会员')
+plt.bar(bar_locs+bar_width,mean_casual_list, width=bar_width,color='g',alpha=0.7,label='非会员')
+# plt.bar() 前两个参数顺序不能变
+
+plt.xticks(bar_locs + bar_width/2,xticks_labels,rotation=45,fontproperties=get_chinese_font())
+plt.ylabel('平均骑行时间（分钟）', fontproperties=get_chinese_font())
+plt.title('会员/非会员骑行时间季度柱状图',fontproperties=get_chinese_font())
+plt.legend(loc='best',prop=get_chinese_font())
+
+plt.tight_layout()
+plt.savefig('./group_bar.png')
+plt.show()
+```
+
+![](https://github.com/davidkorea/bikeshare_project/blob/master/images/group_bar.png)
+
+![](https://github.com/davidkorea/bikeshare_project/blob/master/images/group_bar 2.png)
+
