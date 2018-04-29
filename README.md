@@ -321,3 +321,7 @@ plt.savefig('./group_bar.png')
 plt.show()
 ```
 
+![](https://github.com/davidkorea/bikeshare_project/blob/master/images/group_bar.png)
+
+![](https://github.com/davidkorea/bikeshare_project/blob/master/images/group_bar 2.png)
+
