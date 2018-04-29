@@ -302,26 +302,29 @@ def get_chinese_font():
 ### Grouped bar chart
 
 ```php
-bar_locs = np.arange(4)
-bar_width = 0.35
-xticks_labels = ['第{}季度'.format(i+1) for i in range(4)]
+  bar_locs = np.arange(4)
+  bar_width = 0.35
++ xticks_labels = ['第{}季度'.format(i+1) for i in range(4)]
 
-plt.figure()
-plt.bar(bar_locs,mean_member_list, width=bar_width,color='b',alpha=0.7,label='会员')
-plt.bar(bar_locs+bar_width,mean_casual_list, width=bar_width,color='g',alpha=0.7,label='非会员')
-# plt.bar() 前两个参数顺序不能变
+  plt.figure()
+  plt.bar(bar_locs,mean_member_list, width=bar_width,color='b',alpha=0.7,label='会员')
+  plt.bar(bar_locs+bar_width,mean_casual_list, width=bar_width,color='g',alpha=0.7,label='非会员')
+  # plt.bar() 前两个参数顺序不能变
 
-plt.xticks(bar_locs + bar_width/2,xticks_labels,rotation=45,fontproperties=get_chinese_font())
-plt.ylabel('平均骑行时间（分钟）', fontproperties=get_chinese_font())
-plt.title('会员/非会员骑行时间季度柱状图',fontproperties=get_chinese_font())
-plt.legend(loc='best',prop=get_chinese_font())
++ plt.xticks(bar_locs + bar_width/2,xticks_labels,rotation=45,fontproperties=get_chinese_font())
+  plt.ylabel('平均骑行时间（分钟）', fontproperties=get_chinese_font())
+  plt.title('会员/非会员骑行时间季度柱状图',fontproperties=get_chinese_font())
+  plt.legend(loc='best',prop=get_chinese_font())
 
-plt.tight_layout()
-plt.savefig('./group_bar.png')
-plt.show()
+  plt.tight_layout()
+  plt.savefig('./group_bar.png')
+  plt.show()
 ```
-
 ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/group_bar.png)
+
+through ```fontproperties=get_chinese_font()```,and ```prop=get_chinese_font()``` to show chinese font.
+
+plt.xticks and make the x-label normal 
 
 ![](https://github.com/davidkorea/bikeshare_project/blob/master/images/group_bar_2.png)
 
