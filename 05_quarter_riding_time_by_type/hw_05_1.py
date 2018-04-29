@@ -9,28 +9,21 @@ def chinese():
 
 data_file = './hw_data_temp.csv'
 # print(os.path.exists(data_file))
+month_list = ['1','2','3']
 
 def data_collect():
+    above_list = []
+    below_list = []
+
     data_arr= np.loadtxt(data_file,delimiter=',',dtype='str',skiprows=1)
     cln_data_arr = np.core.defchararray.replace(data_arr,' C','')
 
-    # 1
-    jan_data_arr = cln_data_arr[cln_data_arr[:,0] == '1']  #(31,2)
-    jan_above_num = jan_data_arr[jan_data_arr[:,1] >= '0'].shape[0]
-    jan_below_num = jan_data_arr[jan_data_arr[:, 1] < '0'].shape[0]
-
-    # 2
-    feb_data_arr = cln_data_arr[cln_data_arr[:,0] == '2']
-    feb_above_num = feb_data_arr[feb_data_arr[:,1] >= '0'].shape[0]
-    feb_below_num = feb_data_arr[feb_data_arr[:, 1] < '0'].shape[0]
-
-    # 3
-    mar_data_arr = cln_data_arr[cln_data_arr[:,0] == '3']
-    mar_above_num = mar_data_arr[mar_data_arr[:,1] >= '0'].shape[0]
-    mar_below_num = mar_data_arr[mar_data_arr[:, 1] < '0'].shape[0]
-
-    above_list = [jan_above_num,feb_above_num,mar_above_num]
-    below_list = [jan_below_num,feb_below_num,mar_below_num]
+    for month in month_list:
+        month_data_arr = cln_data_arr[cln_data_arr[:,0]==month]
+        month_above_num = month_data_arr[month_data_arr[:,1]>='0'].shape[0]
+        month_below_num = month_data_arr[month_data_arr[:,1]<'0'].shape[0]
+        above_list.append(month_above_num)
+        below_list.append(month_below_num)
     return above_list,below_list
 
 def plot(above_list,below_list):
@@ -48,7 +41,7 @@ def plot(above_list,below_list):
     plt.legend(loc='best',prop=chinese())
 
     plt.tight_layout()
-    plt.savefig('./hw_temp_bar.png')
+    plt.savefig('./hw_temp_bar_1.png')
     plt.show()
 
 
