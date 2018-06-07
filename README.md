@@ -13,7 +13,7 @@ Before you add files to .git, make .gitignore first and then it could work and i
 $ git clone 
 $ cd bikeshare
 $ touch .gitignore
-$ vim .gitignore
+$ vim .gitignore 
 $ data -> 'ESC'
 $ :wq
 ```
